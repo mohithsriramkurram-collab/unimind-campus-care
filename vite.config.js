@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import base44 from "@base44/vite-plugin";
-import { cloudflare } from "@cloudflare/vite-plugin";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
+import { nitro } from "nitro/vite";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
@@ -22,8 +22,7 @@ export default defineConfig({
       analyticsTracker: true,
       visualEditAgent: true,
     }),
-    // No inspector: a restarted dev server would race the old one for port 9229 and crash.
-    cloudflare({ viteEnvironment: { name: "ssr" }, inspectorPort: false }),
+    nitro(),
     tanstackStart({ srcDirectory: "src" }),
     react(),
   ],
