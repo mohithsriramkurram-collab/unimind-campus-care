@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 45% 98%;
+    --foreground: 222 47% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 18%;
+    --primary: 176 62% 38%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 190 50% 95%;
+    --secondary-foreground: 222 40% 24%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 22% 46%;
+    --accent: 202 78% 93%;
+    --accent-foreground: 222 45% 24%;
+    --destructive: 0 72% 56%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 34% 91%;
+    --input: 214 34% 91%;
+    --ring: 176 62% 38%;
+    --chart-1: 176 62% 42%;
+    --chart-2: 205 75% 60%;
+    --chart-3: 265 55% 70%;
+    --chart-4: 24 85% 68%;
+    --chart-5: 168 55% 55%;
+    --radius: 1.25rem;
+
+    /* Brand */
+    --brand-navy: 222 47% 18%;
+    --brand-teal: 176 62% 38%;
+
+    /* Soft pastels */
+    --pastel-mint: 168 62% 90%;
+    --pastel-sky: 202 82% 92%;
+    --pastel-peach: 24 92% 91%;
+    --pastel-lilac: 265 62% 93%;
+    --pastel-butter: 46 92% 90%;
+
+    --font-heading: "Nunito", ui-sans-serif, system-ui, sans-serif;
+    --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Nunito", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 35% 28%;
+    --sidebar-primary: 176 62% 38%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 176 55% 94%;
+    --sidebar-accent-foreground: 222 45% 22%;
+    --sidebar-border: 214 34% 92%;
+    --sidebar-ring: 176 62% 38%;
+  }
+
+  .dark {
+    --background: 222 45% 10%;
+    --foreground: 210 30% 94%;
+    --card: 222 40% 14%;
+    --card-foreground: 210 30% 94%;
+    --popover: 222 40% 14%;
+    --popover-foreground: 210 30% 94%;
+    --primary: 174 62% 48%;
+    --primary-foreground: 222 45% 10%;
+    --secondary: 222 30% 20%;
+    --secondary-foreground: 210 30% 94%;
+    --muted: 222 28% 19%;
+    --muted-foreground: 214 20% 68%;
+    --accent: 200 35% 24%;
+    --accent-foreground: 200 70% 92%;
+    --destructive: 0 65% 52%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 222 25% 23%;
+    --input: 222 25% 23%;
+    --ring: 174 62% 48%;
+    --chart-1: 174 62% 50%;
+    --chart-2: 205 70% 62%;
+    --chart-3: 265 55% 72%;
+    --chart-4: 24 80% 68%;
+    --chart-5: 168 55% 58%;
+
+    --brand-navy: 222 45% 14%;
+    --brand-teal: 174 62% 48%;
+
+    --pastel-mint: 168 30% 24%;
+    --pastel-sky: 202 35% 26%;
+    --pastel-peach: 24 35% 26%;
+    --pastel-lilac: 265 30% 28%;
+    --pastel-butter: 46 35% 26%;
+
+    --sidebar-background: 222 45% 12%;
+    --sidebar-foreground: 210 28% 88%;
+    --sidebar-primary: 174 62% 48%;
+    --sidebar-primary-foreground: 222 45% 10%;
+    --sidebar-accent: 222 30% 20%;
+    --sidebar-accent-foreground: 210 28% 92%;
+    --sidebar-border: 222 25% 21%;
+    --sidebar-ring: 174 62% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .bg-aurora {
+    background-image:
+      radial-gradient(60% 55% at 12% 8%, hsl(var(--pastel-mint) / 0.65) 0%, transparent 60%),
+      radial-gradient(55% 50% at 88% 0%, hsl(var(--pastel-sky) / 0.6) 0%, transparent 55%),
+      radial-gradient(50% 45% at 70% 100%, hsl(var(--pastel-lilac) / 0.5) 0%, transparent 60%);
+  }
+}

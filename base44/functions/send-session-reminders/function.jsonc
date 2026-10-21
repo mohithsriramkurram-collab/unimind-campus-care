@@ -1,0 +1,13 @@
+{
+  "name": "send-session-reminders",
+  "entry": "entry.ts",
+  "automations": [
+    {
+      "type": "scheduled",
+      "name": "session-reminders-every-30-min",
+      "schedule_mode": "recurring",
+      "schedule_type": "cron",
+      "cron_expression": "*/30 * * * *"
+    }
+  ]
+}

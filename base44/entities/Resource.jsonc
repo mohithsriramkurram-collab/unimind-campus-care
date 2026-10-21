@@ -1,0 +1,50 @@
+{
+  "name": "Resource",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "anxiety",
+        "stress",
+        "sleep",
+        "relationships",
+        "academics",
+        "mindfulness",
+        "depression",
+        "self-esteem"
+      ]
+    },
+    "summary": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "article",
+        "exercise",
+        "audio"
+      ],
+      "default": "article"
+    },
+    "read_time_minutes": {
+      "type": "integer",
+      "default": 5
+    },
+    "cover_color": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "category",
+    "summary",
+    "content"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Session",
+  "type": "object",
+  "properties": {
+    "counselor_id": {
+      "type": "string"
+    },
+    "counselor_name": {
+      "type": "string"
+    },
+    "scheduled_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "duration_minutes": {
+      "type": "integer",
+      "default": 50
+    },
+    "modality": {
+      "type": "string",
+      "enum": [
+        "video",
+        "in-person"
+      ]
+    },
+    "topic": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "scheduled",
+        "completed",
+        "cancelled"
+      ],
+      "default": "scheduled"
+    },
+    "reminder_sent_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "counselor_id",
+    "scheduled_time",
+    "modality"
+  ]
+}

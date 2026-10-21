@@ -1,0 +1,59 @@
+{
+  "name": "Counselor",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "specialties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "bio": {
+      "type": "string"
+    },
+    "photo_url": {
+      "type": "string"
+    },
+    "modalities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "video",
+          "in-person"
+        ]
+      }
+    },
+    "weekly_schedule": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "day": {
+            "type": "integer"
+          },
+          "start": {
+            "type": "string"
+          },
+          "end": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "slot_duration_minutes": {
+      "type": "integer",
+      "default": 50
+    }
+  },
+  "required": [
+    "full_name",
+    "title"
+  ]
+}
